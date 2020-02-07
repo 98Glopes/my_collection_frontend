@@ -26,7 +26,7 @@ function distributeHTML(element, index, array){
 //data.forEach(distributeHTML);
 
 bodyTag = document.getElementsByTagName('body');
-bodyTag.onload = makeRequest('http://0.0.0.0:5000/comic_books/', handleCallback);
+bodyTag.onload = makeRequest('http://mycollectionapi.herokuapp.com/comic_books/', handleCallback);
 
 function handleCallback() {
  if (httpRequest.readyState === 4) {
