@@ -125,6 +125,6 @@ function registerNew(){
 
   var data = getForm("registerForm");
   console.log(data);
-  makePOSTRequest("http://0.0.0.0:5000/comic_books/", registerNewCallback, data);
+  makePOSTRequest("https://mycollectionapi.herokuapp.com/comic_books/", registerNewCallback, data);
 
 }
