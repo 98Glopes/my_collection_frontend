@@ -116,6 +116,7 @@ function registerNewCallback(){
     console.log(httpRequest.status)
     if (httpRequest.status === 201) {
       console.log(httpRequest.response);
+      
       window.location.replace("index.html");
       } else {
       alert('There was a problem with the request.');
