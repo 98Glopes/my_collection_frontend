@@ -37,62 +37,72 @@
       
         <div class="container">
           <!-- Example row of columns -->
-          <div class="col-md-12" id="content"></div>
-
-            <form class="form-horizontal" method="POST" enctype="multipart/form-data" action="https://mycollectionapi.herokuapp.com/comic_books/">
-              <fieldset>
-              
-              <!-- Form Name -->
-              <legend>Register a new comic book</legend>
-              
-              <!-- Text input-->
-              <div class="form-group">
-                <label class="col-md-12 control-label" for="textinput">Title</label>  
-                <div class="col-md-12">
-                <input id="textinput" name="name" type="text" placeholder="Title" class="form-control input-md" required="">
-                  
-                </div>
-              </div>
-              
-              <!-- Text input-->
-              <div class="form-group">
-                <label class="col-md-12 control-label" for="autor">Autor</label>  
-                <div class="col-md-12">
-                <input id="autor" name="autor" type="text" placeholder="Autor" class="form-control input-md">
-                  
-                </div>
-              </div>
-              
-              <!-- Text input-->
-              <div class="form-group">
-                <label class="col-md-12 control-label" for="publisher">Publisher</label>  
-                <div class="col-md-12">
-                <input id="publisher" name="publisher" type="text" placeholder="Publisher" class="form-control input-md" required="">
-                  
-                </div>
-              </div>
-              
-              <!-- Textarea -->
-              <div class="form-group">
-                <label class="col-md-12 control-label" for="description">Description</label>
-                <div class="col-md-12">                     
-                  <textarea class="form-control" id="description" name="description"></textarea>
-                </div>
-              </div>
-              
-              <!-- Button -->
-              <div class="form-group">
-                <label class="col-md-12 control-label" for="">Submit</label>
-                <div class="col-md-12">
-                  <button type="submit" class="btn btn-primary">Save</button>
-                </div>
-              </div>
-              
-              </fieldset>
-              </form>
-
-
-          </div>
+<div class="card">
+<div class="card-header">
+  <ul class="nav nav-tabs card-header-tabs">
+    <li class="nav-item">
+    <a class="nav-link" role="button" href="index.html"><i class="fa fa-arrow-left"></i> </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#" name="${ comic.id }">View</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link active" href="#" name="${ comic.id }">Edit</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#" name="${ comic.id }">Delete</a>
+    </li>
+  </ul>
+</div>
+<div class="card-body">
+  <form class="form-horizontal" id="registerForm" onsubmit="return false">
+    <fieldset>
+    
+    <!-- Form Name -->
+    <legend>Register a new comic book</legend>
+    
+    <!-- Text input-->
+    <div class="form-group">
+      <label class="col-md-12 control-label" for="textinput">Title</label>  
+      <div class="col-md-12">
+      <input id="textinput" name="name" type="text" value="Quiral" class="form-control input-md" required="">
+        
+      </div>
+    </div>
+    
+    <!-- Text input-->
+    <div class="form-group">
+      <label class="col-md-12 control-label" for="autor">Autor</label>  
+      <div class="col-md-12">
+      <input id="autor" name="autor" type="text" placeholder="Autor" class="form-control input-md">
+        
+      </div>
+    </div>
+    
+    <!-- Text input-->
+    <div class="form-group">
+      <label class="col-md-12 control-label" for="publisher">Publisher</label>  
+      <div class="col-md-12">
+      <input id="publisher" name="publisher" type="text" placeholder="Publisher" class="form-control input-md" required="">
+        
+      </div>
+    </div>
+    
+    <!-- Textarea -->
+    <div class="form-group">
+      <label class="col-md-12 control-label" for="description">Description</label>
+      <div class="col-md-12">                     
+        <textarea class="form-control" id="description" name="description"></textarea>
+      </div>
+    </div>
+  
+    </fieldset>
+    </form>
+      <div class="col-md-12">
+        <button type='button' onclick="registerNew()" class="btn btn-primary">Save</button>
+      </div>
+</div>
+</div>
       
           
           
